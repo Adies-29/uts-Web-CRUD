@@ -13,7 +13,7 @@ export default function CategoryIndex() {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const res = await fetch("http://localhost:3000/categories");
+                const res = await fetch("https://uts-web-crud.vercel.app/categories");
                 
                 if (!res.ok) {
                     throw new Error("Gagal mengambil data kategori");
@@ -37,7 +37,7 @@ export default function CategoryIndex() {
         if (!confirmDelete) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/categories/${id}`, {
+            const res = await fetch(`https://uts-web-crud.vercel.app/categories/${id}`, {
                 method: "DELETE",
             });
             

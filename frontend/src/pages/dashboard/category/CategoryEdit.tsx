@@ -31,7 +31,7 @@ export default function CategoryEdit() {
     useEffect(() => {
         const fetchCategory = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/categories/${id}`);
+                const res = await fetch(`https://uts-web-crud.vercel.app/categories/${id}`);
 
                 if (!res.ok) {
                     throw new Error("Gagal mengambil data kategori");
@@ -53,7 +53,7 @@ export default function CategoryEdit() {
 
     const onSubmit = async (data: FormData) => {
         try {
-            const response = await fetch(`http://localhost:3000/categories/${id}`, {
+            const response = await fetch(`https://uts-web-crud.vercel.app/categories/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

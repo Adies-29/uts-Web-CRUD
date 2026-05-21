@@ -57,7 +57,7 @@ export default function EventCreate() {
 
     const fetchCategoriesDropdown = async () => {
       try {
-        const res = await fetch("http://localhost:3000/categories");
+        const res = await fetch("https://uts-web-crud.vercel.app/categories");
 
         if (!res.ok) {
           throw new Error(`Gagal mengambil data, status: ${res.status}`);
@@ -69,7 +69,7 @@ export default function EventCreate() {
           setCategories(dataCategory);
         }
 
-        const resPem = await fetch("http://localhost:3000/pembicara");
+        const resPem = await fetch("https://uts-web-crud.vercel.app/pembicara");
         if (resPem.ok) {
           const dataPem = await resPem.json();
           
@@ -87,7 +87,7 @@ export default function EventCreate() {
   const onSubmit = async (data: FormData) => {
     try {
 
-      const response = await fetch("http://localhost:3000/events", {
+      const response = await fetch("https://uts-web-crud.vercel.app/events", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

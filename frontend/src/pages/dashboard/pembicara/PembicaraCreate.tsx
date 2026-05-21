@@ -35,7 +35,7 @@ export default function PembicaraCreate() {
 
   const onSubmit = async (data: PembicarFrom) => {
     try {
-      const response = await fetch("http://localhost:3000/pembicara", {
+      const response = await fetch("https://uts-web-crud.vercel.app/pembicara", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

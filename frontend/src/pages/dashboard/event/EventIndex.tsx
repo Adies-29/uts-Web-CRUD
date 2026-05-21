@@ -23,7 +23,7 @@ export default function EventIndex() {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await fetch("http://localhost:3000/events");
+                const res = await fetch("https://uts-web-crud.vercel.app/events");
 
                 if (!res.ok) {
                     throw new Error("Gagal mengambil data event");
@@ -48,7 +48,7 @@ export default function EventIndex() {
         if (!confirmDelete) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/events/${id}`, {
+            const res = await fetch(`https://uts-web-crud.vercel.app/events/${id}`, {
                 method: "DELETE",
             });
             if (res.ok) {

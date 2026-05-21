@@ -21,7 +21,7 @@ export default function PembicaraIndex() {
 
         const fetchPembicara = async () => {
             try {
-                const res = await fetch("http://localhost:3000/pembicara");
+                const res = await fetch("https://uts-web-crud.vercel.app/pembicara");
 
                 if (!res.ok) {
                     throw new Error("Gagal mengambil data");
@@ -45,7 +45,7 @@ export default function PembicaraIndex() {
         if (!confirmDelete) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/pembicara/${id}`, {
+            const res = await fetch(`https://uts-web-crud.vercel.app/pembicara/${id}`, {
                 method: "DELETE",
             });
             if (res.ok) {

@@ -39,7 +39,7 @@ export default function PembicaraEdit() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/pembicara/${id}`);
+        const res = await fetch(`https://uts-web-crud.vercel.app/pembicara/${id}`);
         if (!res.ok) throw new Error("Gagal mengambil data pembicara");
 
         const data = await res.json();
@@ -56,7 +56,7 @@ export default function PembicaraEdit() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch(`http://localhost:3000/pembicara/${id}`, {
+      const response = await fetch(`https://uts-web-crud.vercel.app/pembicara/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

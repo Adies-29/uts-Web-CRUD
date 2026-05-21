@@ -54,15 +54,15 @@ export default function EventEdit() {
     const loadData = async () => {
       try {
 
-        const resCat = await fetch("http://localhost:3000/categories");
+        const resCat = await fetch("https://uts-web-crud.vercel.app/categories");
         const data = await resCat.json();
         setCategories(data.categories || []);
 
-        const resPem = await fetch("http://localhost:3000/pembicara");
+        const resPem = await fetch("https://uts-web-crud.vercel.app/pembicara");
         const dataPem = await resPem.json();
         setPembicaras(dataPem.pembicara || dataPem.data || dataPem);
 
-        const resEv = await fetch(`http://localhost:3000/events/${id}`);
+        const resEv = await fetch(`https://uts-web-crud.vercel.app/events/${id}`);
         if (!resEv.ok) throw new Error("Gagal mengambil data event");
 
         const dataEv = await resEv.json();
@@ -85,7 +85,7 @@ export default function EventEdit() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch(`http://localhost:3000/events/${id}`, {
+      const response = await fetch(`https://uts-web-crud.vercel.app/events/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
