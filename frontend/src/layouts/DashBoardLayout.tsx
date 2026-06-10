@@ -70,10 +70,6 @@ export default function DashboardLayout(){
             </div>
 
             <div className="flex-1 overflow-y-auto bg-amber-50 relative">
-
-                <div className="text-center flex justify-center font-bold">
-                    <h1>Selamat datang</h1>
-                </div>
                 
                 <div className="p-8 pb-20">
                     <Outlet/>
