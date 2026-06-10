@@ -38,7 +38,7 @@ export default function UserEdit() {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/user/${id}`)
+                const res = await fetch(`https://uts-web-crud.vercel.app/user/${id}`)
                 if (!res.ok) throw new Error("Gagal mengambil data user");
 
                 const data = await res.json();
@@ -59,7 +59,7 @@ export default function UserEdit() {
 
     const onSubmit = async (data: UserData) => {
         try {
-            const response = await fetch(`http://localhost:3000/user/${id}`, {
+            const response = await fetch(`https://uts-web-crud.vercel.app/user/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

@@ -17,7 +17,7 @@ export default function UserIndex(){
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await fetch("http://localhost:3000/user");
+                const res = await fetch("https://uts-web-crud.vercel.app/user");
 
                 if (!res.ok) {
                     throw new Error("Gagal mengambil data");
@@ -40,7 +40,7 @@ export default function UserIndex(){
         if (!confirmDelete) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/user/${id}`, {
+            const res = await fetch(`https://uts-web-crud.vercel.app/user/${id}`, {
                 method: "DELETE",
             });
             if (res.ok) {

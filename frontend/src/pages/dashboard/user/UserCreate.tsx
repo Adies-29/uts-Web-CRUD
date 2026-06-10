@@ -37,7 +37,7 @@ export default function UserCreate() {
 
   const onSubmit = async (data: UserFrom) => {
     try {
-      const response = await fetch("http://localhost:3000/user", {
+      const response = await fetch("https://uts-web-crud.vercel.app/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
