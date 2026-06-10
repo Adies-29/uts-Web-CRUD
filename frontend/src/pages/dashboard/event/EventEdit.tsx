@@ -198,7 +198,8 @@ export default function EventEdit() {
 
           </div>
 
-          <div className="flex justify-end mt-2 pt-4 border-t border-gray-100">
+          <div className="flex justify-end mt-4 gap-3">
+             <Button type="button" label="Batal" variant="secondary" onClick={() => navigate("/dashboard/event")} />
             <Button type="submit" label="Simpan Event" />
           </div>
 

@@ -71,7 +71,8 @@ export default function CategoryCreate() {
             error={errors.name?.message}
           />
 
-          <div className="flex justify-end mt-2">
+          <div className="flex justify-end mt-4 gap-3">
+            <Button type="button" label="Batal" variant="secondary" onClick={() => navigate("/dashboard/category")} />
             <Button type="submit" label="Simpan Kategori" />
           </div>
         </form>

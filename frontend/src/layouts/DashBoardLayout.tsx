@@ -48,6 +48,11 @@ export default function DashboardLayout(){
                                 Pembicara
                             </Link>
                         </li>
+                        <li>
+                            <Link to="/dashboard/user" className="flex items-center gap-3 p-5 text-gray-600 font-medium rounded-xl hover:bg-red-50 hover:text-[#802D43] transition-colors group">
+                                User
+                            </Link>
+                        </li>
                     </ul>
                 </div>
 

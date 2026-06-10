@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 interface PembicaraCardProps {
     id: number;         
     name: string;
-    role: string;
+    role?: string;
     imageUrl: string;
     eventName?: string;
     onDelete: (id: number) => void; 

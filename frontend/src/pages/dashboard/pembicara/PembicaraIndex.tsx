@@ -72,12 +72,13 @@ export default function PembicaraIndex() {
             </div>
 
             {pembicaraList.length === 0 ? (
-                <div className="text-center text-gray-500 py-10">Belum ada data pembicara.</div>
+                <div className="text-center text-gray-500 py-10 bg-white rounded-xl border border-gray-100">Belum ada data pembicara.</div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {pembicaraList.map((item) => (
                         <PembicaraCard
                             key={item.id}
+                            
                             id={item.id} 
                             name={item.name}
                             role={item.role}

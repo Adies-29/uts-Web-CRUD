@@ -17,6 +17,9 @@ import PembicaraEdit from './pages/dashboard/pembicara/PembicaraEdit';
 import EventEdit from './pages/dashboard/event/EventEdit';
 import CategoryEdit from './pages/dashboard/category/CategoryEdit';
 import BiodataIndex from './pages/dashboard/BiodataIndex';
+import UserIndex from './pages/dashboard/user/UserIndex';
+import UserCreate from './pages/dashboard/user/UserCreate';
+import UserEdit from './pages/dashboard/user/UserEdit';
 
 function App() {
   return (
@@ -51,6 +54,14 @@ function App() {
             <Route path="event" element={<EventIndex />} />
             <Route path="event/create" element={<EventCreate />} />
             <Route path="/dashboard/event/edit/:id" element={<EventEdit />} />
+
+
+
+            <Route path="user" element={<UserIndex />} />
+            <Route path="user/create" element={<UserCreate />} />
+            <Route path="/dashboard/user/edit/:id" element={<UserEdit />} />
+
+
             
           </Route> 
           

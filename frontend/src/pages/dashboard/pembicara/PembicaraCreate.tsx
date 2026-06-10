@@ -90,7 +90,8 @@ export default function PembicaraCreate() {
               error={errors.image?.message}
             />
 
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-end gap-3 mt-4">
+               <Button type="button" label="Batal" variant="secondary" onClick={() => navigate("/dashboard/pembicara")} />
               <Button type="submit" label="Simpan Pembicara" />
             </div>
           </form>
